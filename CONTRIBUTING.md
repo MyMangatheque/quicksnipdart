@@ -13,21 +13,21 @@ You can contribute in two main ways:
 
 ### How to report bugs
 
-If you spot a bug in the codebase or issues with the documentation, please open up a [GitHub issue](https://github.com/dostonnabotov/quicksnip/issues) detailing the problem before creating a PR. Once confirmed with maintainers, you can then create a PR.
+If you spot a bug in the codebase or issues with the documentation, please open up a [GitHub issue](https://github.com/mymangatheque/quicksnipdart/issues) detailing the problem before creating a PR. Once confirmed with maintainers, you can then create a PR.
 
 ### How to propose new features
 
-If you are interested in proposing new features, please open up a new [GitHub discussion](https://github.com/dostonnabotov/quicksnip/discussions) with details for the proposed feature.
+If you are interested in proposing new features, please open up a new [GitHub discussion](https://github.com/mymangatheque/quicksnipdart/discussions) with details for the proposed feature.
 
 Please do not create a PR for a new feature without first discussing it with the maintainers. If you create a PR for a new feature without discussing it first, then your PR will be closed.
 
 ---
 
-## Snippets Guidelines
+## Snippets Components Guidelines
 
-### Snippet Tags
+### Snippet/Component Tags
 
-- Tags must describe the snippet with simple word.
+- Tags must describe the snippet/component with simple word.
 
 Here's an example:
 
@@ -40,48 +40,50 @@ tags: number,currency
 ---
 ```
 
-**Do not use generic keywords or the language itself as a tag `utility` or `javascript`!**
+**Do not use generic keywords or the language itself as a tag `utility` or `flutter`!**
 
-### Snippet Format
+### Snippet/Component Format
 
-**All** snippets should follow the following structure:
+**All** snippets/components should follow the following structure:
 
-- A `code` segment, containing a function with the actual snippet functionnality
+- A `code` segment, containing a function with the actual snippet/component functionnality
 - An `example` segement, containing one or more examples of use
 
-Example in javascript:
-```js
-function example(x) {
+Example in dart:
+
+```dart
+Function example(x) {
     return x * 2;
 }
 
 // Usage:
-example(5) // Returns: 10
+example(5); // Returns: 10
 ```
 
 If your function doesn't return anything just show how to use it. If the result of your function is too complicated to be expressed in a single comment, your snippet is probably too complex to begin with.
 
-### Snippet boundaries
+### Snippet or Component boundaries
 
-To ensure your snippet isn’t refused, consider these questions:
-- **Does the standard library of my language provide an easy way of doing this ?**
-- **Does that snippet have a real, and practical use case ?**
+To ensure your snippet/component isn’t refused, consider these questions:
+
+- **Does the standard library of my framework provide an easy way of doing this ?**
+- **Does that snippet/component have a real, and practical use case ?**
 - **Could it be split into separate parts to be better understood ?**
 
-If any answer is yes, then your snippet will most likely get rejected.
+If any answer is yes, then your snippet/component will most likely get rejected.
 
 ---
 
-## Adding Snippets
+## Adding Snippets or Components
 
-### Adding a New Snippet
+### Adding a New Snippet or Component
 
-1. **Ensure your snippet match [guidelines](#snippets-guidelines)**
+1. **Ensure your snippet match [guidelines](#snippets-components-guidelines)**
 
 2. **Navigate to the relevant folder:**
   
     - Go to the `/snippets` folder in the root directory.
-    - Locate the folder for the programming language of your snippet, such as `javascript` or `python`.
+    - Locate the folder for the framework of your snippet, such as `dart-native` or `flutter`.
 
 3. **Choose the correct category:**
 
@@ -93,9 +95,9 @@ If any answer is yes, then your snippet will most likely get rejected.
     - Create a new file with a `.md` extension.
     - Name the file appropriately, keeping it descriptive and concise.
 
-5. **Add your snippet:**
+5. **Add your snippet/component:**
 
-    - Use the following format to structure your snippet:
+    - Use the following format to structure your snippet/compoenent:
 
 ````md
 ---
@@ -115,16 +117,16 @@ Here’s an example for JavaScript:
 ````md
 ---
 title: Format Date
-description: Formats a date in 'YYYY-MM-DD' format.
-author: dostonnabotov
-tags: javascript,date,format
+description: Formats a date from a String to a DateTime.
+author: creeperfarm
+tags: date,format
 ---
 
-```js
-const formatDate = (date) => date.toISOString().split('T')[0];
+```dart
+final DateTime date = DateTime.parse('2024-12-10 07:00:00.000Z');
 
 // Usage:
-console.log(formatDate(new Date())); // Output: '2024-12-10'
+print(date.year); // Output: '2024'
 ```
 ````
 
@@ -132,26 +134,30 @@ console.log(formatDate(new Date())); // Output: '2024-12-10'
     - Enclose your code with triple backticks (```).
     - Specify the language after the first set of backticks for syntax highlighting.
 
-7. **Test your snippet:**
+7. **Test your snippet/component:**
    - Ensure your code runs as expected. \
-        To test that your snippets are formatted correctly use the `snippets:check` script:
+        To test that your snippets/components are formatted correctly use the `snippets:check` script:
+
+        ```bash
+        npm run snippets:check
         ```
-        $ npm run snippets:check
-        ```
+
         It will return nothing if they are well formatted, otherwise it will tell you what the error is.
 
         ---
-        To preview the snippets, you need to consolidate them, use the `snippets:consolidate` script:
+        To preview the snippets/component, you need to consolidate them, use the `snippets:consolidate` script:
+
+        ```bash
+        npm run snippets:consolidate
         ```
-        $ npm run snippets:consolidate
-        ```
+
         It will update the snippets in the `/public` folder, making them available to the frontend.
 
 Expected file structure:
 
 ```md
 /snippets
-  |- language
+  |- framework
     |- category-name
       |- your-snippet-here.md
 ```
@@ -194,20 +200,18 @@ contributors: contributor1, contributor2, your-github-username
 
 > We want to make sure that original author and contributor(s) are credited for their work.
 
-
 ### Adding a New Category
 
-If your snippet doesn’t fit into any existing category, you can create a new one! Just make sure it’s unique and doesn’t overlap with others (e.g., don’t create separate categories for “Date” and “Time” when “Date and Time” works).
+If your snippet/component doesn’t fit into any existing category, you can create a new one! Just make sure it’s unique and doesn’t overlap with others (e.g., don’t create separate categories for “Date” and “Time” when “Date and Time” works).
 
 1. **Create a new category folder:**
 
     - In the relevant language directory, add a new folder.
     - Use a lowercase name with hyphens for separation (e.g., `file-handling`).
 
-2. **Add snippets:**
+2. **Add snippets or components:**
 
-    - Follow the [Adding a New Snippet](#adding-a-new-snippet) instructions.
-
+    - Follow the [Adding a New Snippet/Component](#adding-a-new-snippet-or-component) instructions.
 
 Example structure:
 
@@ -219,25 +223,25 @@ Example structure:
     |- ....
 ```
 
-### Adding a New Language
+### Adding a New Framework
 
-If you want to introduce a new programming language, here's how to do it:
+If you want to introduce a new framework for dart, here's how to do it:
 
-1. **Create a language folder:**
+1. **Create a framework folder:**
 
     - Add a new folder under the `snippets` directory.
-    - Name it after the language in lowercase (e.g., `go`, `ruby`).
+    - Name it after the framework in lowercase (e.g., `flutter`, `dart-native`).
 
-2. **Add categories and snippets:**
+2. **Add categories and snippets/components:**
 
-    - Follow the [Adding a New Snippet](#adding-a-new-snippet) and [Adding a New Category](#adding-a-new-category) guidelines.
+    - Follow the [Adding a New Snippet or Components](#adding-a-new-snippet-or-component) and [Adding a New Category](#adding-a-new-category) guidelines.
 
-4. **Include an icon:**
+3. **Include an icon:**
 
-    - Add an `icon.svg` file (50x50px) in the same language folder.
+    - Add an `icon.svg` file (50x50px) in the same framework folder.
     - Use tools like [Resize SVG](https://www.iloveimg.com/resize-image/resize-svg) to ensure the correct size.
 
-5. **Double-check your work:**
+4. **Double-check your work:**
 
     - Verify that everything is structured correctly and displays as intended.
 
@@ -245,8 +249,8 @@ If you want to introduce a new programming language, here's how to do it:
 
 ## Final Notes
 
-Whether you’re fixing a tiny typo, writing a new snippet, or dreaming up big features, every bit counts! 🛠️
+Whether you’re fixing a tiny typo, writing a new snippet or a new component, or dreaming up big features, every bit counts! 🛠️
 
-If you have any questions or need help, feel free to open a new [GitHub discussion](https://github.com/dostonnabotov/quicksnip/discussions).
+If you have any questions or need help, feel free to open a new [GitHub discussion](https://github.com/mymangatheque/quicksnipdart/discussions).
 
 Happy coding! 💻✨

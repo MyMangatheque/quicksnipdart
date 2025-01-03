@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <a href="/" className="logo">
       <LogoIcon />
-      <span>QuickSnip</span>
+      <span>QuickSnipDart</span>
     </a>
   );
 };

@@ -7,15 +7,25 @@ const Footer = () => {
         <div className="footer__content flow" data-flow-space="sm">
           <p>
             <a href="/" className="styled-link">
-              QuickSnip
+              QuickSnipDart
             </a>{" "}
-            is an open-source project that categorizes handy code snippets
-            across various programming languages.
+            is an open-source project, forked from{" "}
+            <a
+              href="https://github.com/dostonnabotov/quicksnip"
+              className="styled-link"
+            >
+              <strong>QuickSnap</strong>
+            </a>
+            .{" "}
+            <a href="/" className="styled-link">
+              QuickSnipDart
+            </a>{" "}
+            categorizes handy code snippets and components for dart and flutter.
           </p>
           <p>
             Built with love and powered by an{" "}
             <a
-              href="https://github.com/dostonnabotov/quicksnip"
+              href="https://github.com/mymangatheque/quicksnipdart"
               target="_blank"
               rel="noopener noreferrer"
               className="styled-link"
@@ -29,7 +39,7 @@ const Footer = () => {
           <ul className="flow" data-flow-space="sm">
             <li>
               <a
-                href="https://github.com/dostonnabotov/quicksnip/blob/main/CONTRIBUTING.md"
+                href="https://github.com/mymangatheque/quicksnipdart/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"
@@ -39,7 +49,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://github.com/dostonnabotov/quicksnip"
+                href="https://github.com/mymangatheque/quicksnipdart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"
@@ -53,22 +63,12 @@ const Footer = () => {
           <ul className="flow" data-flow-space="sm">
             <li>
               <a
-                href="https://github.com/dostonnabotov/quicksnip"
+                href="https://github.com/mymangatheque/quicksnipdart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="styled-link"
               >
                 See the community
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://ko-fi.com/technoph1le"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="styled-link"
-              >
-                Support this project
               </a>
             </li>
           </ul>

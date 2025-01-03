@@ -12,7 +12,7 @@ const Header = () => {
         <SearchInput />
         <ThemeToggle />
         <LinkButton
-          href="https://github.com/dostonnabotov/quicksnip/blob/main/CONTRIBUTING.md"
+          href="https://github.com/mymangatheque/quicksnipdart/blob/main/CONTRIBUTING.md"
           target="_blank"
           rel="noopener noreferrer"
         >

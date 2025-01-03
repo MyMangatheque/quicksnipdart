@@ -4,8 +4,8 @@ import { AppState, LanguageType, SnippetType } from "@types";
 
 // tokens
 const defaultLanguage: LanguageType = {
-  lang: "JAVASCRIPT",
-  icon: "/icons/javascript.svg",
+  lang: "DART NATIVE",
+  icon: "/icons/dart-native.svg",
 };
 
 // TODO: add custom loading and error handling

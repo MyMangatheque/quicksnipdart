@@ -1,6 +1,6 @@
 {
-  "name": "QuickSnip",
-  "short_name": "QuickSnip",
+  "name": "QuickSnipDart",
+  "short_name": "QuickSnipDart",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
