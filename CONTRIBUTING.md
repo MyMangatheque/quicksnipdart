@@ -112,7 +112,7 @@ author: your-github-username
 ```
 ````
 
-Here’s an example for JavaScript:
+Here’s an example for Dart:
 
 ````md
 ---
