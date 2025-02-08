@@ -87,13 +87,13 @@ If any answer is yes, then your snippet/component will most likely get rejected.
 
 3. **Choose the correct category:**
 
-    - Within the language folder, find the relevant category folder for your snippet.
-    - If no suitable category exists, refer to [Adding a New Category](#adding-a-new-category).
+   - Within the language folder, find the relevant category folder for your snippet.
+   - If no suitable category exists, refer to [Adding a New Category](#adding-a-new-category).
 
 4. **Create a markdown file:**
 
-    - Create a new file with a `.md` extension.
-    - Name the file appropriately, keeping it descriptive and concise.
+   - Create a new file with a `.md` extension.
+   - Name the file appropriately, keeping it descriptive and concise.
 
 5. **Add your snippet/component:**
 
@@ -131,8 +131,9 @@ print(date.year); // Output: '2024'
 ````
 
 6. **Use syntax highlighting:**
-    - Enclose your code with triple backticks (```).
-    - Specify the language after the first set of backticks for syntax highlighting.
+
+   - Enclose your code with triple backticks (```).
+   - Specify the language after the first set of backticks for syntax highlighting.
 
 7. **Test your snippet/component:**
    - Ensure your code runs as expected. \
@@ -170,7 +171,7 @@ If you’d like to refine or improve an existing snippet:
 
 1. **Add a `contributors` field:**
 
-    - Include your GitHub username under the `contributors` field in the metadata section.
+   - Include your GitHub username under the `contributors` field in the metadata section.
 
 ````md
 ---
@@ -188,7 +189,7 @@ Updated code here
 
 2. **Credit all contributors:**
 
-    - If contributors already exist, add your username separated by a comma
+   - If contributors already exist, add your username separated by a comma
 
 ```md
 contributors: contributor1, contributor2, your-github-username
@@ -196,7 +197,7 @@ contributors: contributor1, contributor2, your-github-username
 
 3. **Document changes:**
 
-    - Clearly indicate what you updated and why in your pull request description.
+   - Clearly indicate what you updated and why in your pull request description.
 
 > We want to make sure that original author and contributor(s) are credited for their work.
 
@@ -206,8 +207,8 @@ If your snippet/component doesn’t fit into any existing category, you can crea
 
 1. **Create a new category folder:**
 
-    - In the relevant language directory, add a new folder.
-    - Use a lowercase name with hyphens for separation (e.g., `file-handling`).
+   - In the relevant language directory, add a new folder.
+   - Use a lowercase name with hyphens for separation (e.g., `file-handling`).
 
 2. **Add snippets or components:**
 
@@ -217,10 +218,10 @@ Example structure:
 
 ```md
 /snippets
-  |- python
-    |- file-handling
-    |- list-manipulation
-    |- ....
+|- python
+|- file-handling
+|- list-manipulation
+|- ....
 ```
 
 ### Adding a New Framework
@@ -243,9 +244,29 @@ If you want to introduce a new framework for dart, here's how to do it:
 
 4. **Double-check your work:**
 
-    - Verify that everything is structured correctly and displays as intended.
+   - Verify that everything is structured correctly and displays as intended.
 
 ---
+
+## Testing Snippets
+
+To test that your snippets are formatted correctly use the following script:
+
+```
+$ npm run snippets:check
+```
+
+It will return nothing if they are well formatted, otherwise it will tell you what the error is.
+
+---
+
+To preview the snippets, you need to consolidate them, use the following script:
+
+```
+$ npm run snippets:consolidate
+```
+
+It will update the snippets in the `/public` folder, making them available to the frontend.
 
 ## Final Notes
 

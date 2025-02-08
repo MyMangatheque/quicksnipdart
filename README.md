@@ -4,36 +4,38 @@ An open-source project that categorizes handy code snippets and components for d
 
 ![Website preview](/public/preview.png)
 
-## How to contribute
+## How to Contribute
 
 Want to help make QuickSnipDart even better? You can contribute by:
 
 - **Improving the Code**: Fix bugs, suggest new features, or optimize the project.
 - **Adding New Snippets/Components**: Share your favorite snippets/components to grow the database.
 
-Be sure to check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file for detailed guidelines.
+Check out the [CONTRIBUTING.md](/CONTRIBUTING.md) file for detailed contribution guidelines.
 
-### Improving the code
+## General Rules
 
-- **Reporting bugs**
+To keep everything smooth and consistent, please:
 
-  - If you spot a bug in the codebase or issues with the documentation, please open up a [GitHub issue](https://github.com/mymangatheque/quicksnipdart/issues) detailing the problem before creating a PR.
-  - Once confirmed with maintainers, you can then create a PR.
+- If you spot a bug in the codebase or issues with the documentation, please open up a [GitHub issue](https://github.com/mymangatheque/quicksnipdart/issues) detailing the problem before creating a PR.
+- Once confirmed with maintainers, you can then create a PR.
 
-- **Proposing new features**
+Following these rules helps us build an awesome community. 🚀
 
-  - If you are interested in proposing new features, please open up a new [GitHub discussion](https://github.com/mymangatheque/quicksnipdart/discussions) with details for the proposed feature.
-  - Please do **not** create a PR for a new feature without first discussing it with the maintainers. If you create a PR for a new feature without discussing it first, then your PR will be closed.
+- If you are interested in proposing new features, please open up a new [GitHub discussion](https://github.com/mymangatheque/quicksnipdart/discussions) with details for the proposed feature.
+- Please do **not** create a PR for a new feature without first discussing it with the maintainers. If you create a PR for a new feature without discussing it first, then your PR will be closed.
 
 ### Adding a Snippet/Component
 
-The snippets database is located in the `/snippets` folder.
+- ⚡️ [**Raycast Extension**](https://www.raycast.com/anders_morille/quicksnip): An extension to browse and use QuickSnip snippets directly from Raycast. (Thanks to the creator: [@lille-morille](https://github.com/lille-morille))
 
-1. Find the relevant language folder.
+If you’d like to create your own extension or tool:
 
-2. Locate the appropriate category folder for your snippet.
+- [x] Please ensure it adheres to our project’s licensing and attribution requirements.
+- [x] Please link to the [original QuickSnip repository](https://github.com/dostonnabotov/quicksnip) in your extension/tool to attribute the source.
+- [x] Share your work with us — we’d be thrilled to feature it!
 
-3. Create a markdown file and add your snippet using the following format:
+## Project Vision
 
 ````md
 ---
