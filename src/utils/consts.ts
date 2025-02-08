@@ -3,8 +3,8 @@ import { AppState, CategoryType, LanguageType } from "@types";
 import { slugify } from "./slugify";
 
 export const defaultLanguage: LanguageType = {
-  name: "JAVASCRIPT",
-  icon: "/icons/javascript.svg",
+  name: "DART",
+  icon: "/icons/dart.svg",
   subLanguages: [],
 };
 
